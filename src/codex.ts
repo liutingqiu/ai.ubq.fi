@@ -2668,7 +2668,7 @@ const fetchPreparedCodexResponses = async (
         retryCandidate.routing,
         "post_banked_reset",
         () => ensurePostResetRetryAuthCurrent(retryCandidate),
-        true
+        false
       );
     } catch (error) {
       if (error instanceof CodexBankedResetRetryFenceError) return normalResponse;
